@@ -40,7 +40,6 @@ test:
   requires:
     - pytest
 
-
 about:
   home: https://github.com/huggingface/transformers
   license: Apache-2.0
