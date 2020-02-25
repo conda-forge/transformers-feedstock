@@ -1,20 +1,20 @@
 {% set name = "transformers" %} 
-{% set version = "2.1.1" %}
+{% set version = "2.5.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "bc0aee900929ee51ce1ad13e4c00b6b7900177e522ec4b393a2aab10fa02b7bd"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: c4b775ebffce65e1d8f2e5db74c5efdc4426ebecdaee1516c90573aafa1ceaf4
 
 build:
   noarch: python
   number: 0
   entry_points:
     - transformers=transformers.__main__:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
@@ -45,7 +45,7 @@ about:
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: "State-of-the-art Natural Language Processing for TensorFlow 2.0 and PyTorch"
+  summary: State-of-the-art Natural Language Processing for TensorFlow 2.0 and PyTorch
   doc_url: https://huggingface.co/transformers/
 
 extra:
