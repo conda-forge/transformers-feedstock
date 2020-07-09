@@ -29,7 +29,7 @@ requirements:
     - requests
     - sacremoses
     - tqdm
-    - pathlib
+    - filelock
 
 test:
   imports:
