@@ -19,12 +19,12 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - pathlib
   run:
     - boto3
     - numpy
-    - python
+    - python >=3.6
     - regex
     - requests
     - sacremoses
