@@ -20,6 +20,7 @@ requirements:
   host:
     - pip
     - python
+    - pathlib
   run:
     - boto3
     - numpy
