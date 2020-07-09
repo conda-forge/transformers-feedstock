@@ -1,13 +1,13 @@
-{% set name = "transformers" %} 
-{% set version = "2.1.1" %}
+{% set name = "transformers" %}
+{% set version = "3.0.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "bc0aee900929ee51ce1ad13e4c00b6b7900177e522ec4b393a2aab10fa02b7bd"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: e3a72bdba426b7202ed90611aa5b1a1f695c484e937182cbbfa9e719a5400d7e
 
 build:
   noarch: python
@@ -51,3 +51,6 @@ about:
 extra:
   recipe-maintainers:
     - roccqqck
+    - oblute
+    - rluria14
+    - ndmaxar
