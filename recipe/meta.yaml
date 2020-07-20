@@ -14,7 +14,7 @@ build:
   number: 0
   entry_points:
     - transformers=transformers.__main__:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -30,6 +30,7 @@ requirements:
     - sacremoses
     - tqdm
     - filelock
+    - tokenizers
 
 test:
   imports:
