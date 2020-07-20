@@ -20,18 +20,20 @@ requirements:
   host:
     - pip
     - python >=3.6
-    - pathlib
   run:
-    - boto3
     - numpy
     - python >=3.6
-    - regex
+    - regex !=2019.12.17
     - requests
     - sacremoses
-    - tqdm
+    - tqdm >=4.27
     - filelock
     - tokenizers
     - sentencepiece
+    - packaging
+    - filelock
+    - pytorch
+    - tensorflow
 
 test:
   imports:
@@ -58,3 +60,4 @@ extra:
     - oblute
     - rluria14
     - ndmaxar
+    - setu4993
