@@ -38,13 +38,14 @@ requirements:
 test:
   imports:
     - transformers
+    - transformers.benchmark
+    - transformers.commands
     - transformers.data
+    - transformers.data.datasets
     - transformers.data.metrics
     - transformers.data.processors
   commands:
-    - transformers --help
-  requires:
-    - pytest
+    - transformers-cli --help
 
 about:
   home: https://github.com/huggingface/transformers
