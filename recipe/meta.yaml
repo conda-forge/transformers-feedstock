@@ -1,44 +1,51 @@
-{% set name = "transformers" %} 
-{% set version = "2.1.1" %}
+{% set name = "transformers" %}
+{% set version = "3.0.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: "bc0aee900929ee51ce1ad13e4c00b6b7900177e522ec4b393a2aab10fa02b7bd"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: e3a72bdba426b7202ed90611aa5b1a1f695c484e937182cbbfa9e719a5400d7e
 
 build:
   noarch: python
   number: 0
   entry_points:
     - transformers=transformers.__main__:main
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
-    - boto3
     - numpy
-    - python
-    - regex
+    - python >=3.6
+    - regex !=2019.12.17
     - requests
     - sacremoses
-    - tqdm
+    - tqdm >=4.27
+    - filelock
+    - tokenizers
+    - sentencepiece
+    - packaging
+    - filelock
+    - pytorch
+    - tensorflow
 
 test:
   imports:
     - transformers
+    - transformers.benchmark
+    - transformers.commands
     - transformers.data
+    - transformers.data.datasets
     - transformers.data.metrics
     - transformers.data.processors
   commands:
-    - transformers --help
-  requires:
-    - pytest
+    - transformers-cli --help
 
 about:
   home: https://github.com/huggingface/transformers
@@ -51,3 +58,7 @@ about:
 extra:
   recipe-maintainers:
     - roccqqck
+    - oblute
+    - rluria14
+    - ndmaxar
+    - setu4993
