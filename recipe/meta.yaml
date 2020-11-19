@@ -39,6 +39,9 @@ requirements:
     - protobuf
 
 test:
+  requires:
+    - pytorch
+    - tensorflow
   imports:
     - transformers
     - transformers.benchmark
