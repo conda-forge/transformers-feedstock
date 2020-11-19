@@ -1,5 +1,5 @@
 {% set name = "transformers" %}
-{% set version = "3.3.1" %}
+{% set version = "3.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,35 +7,41 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 43182d691496e4d9550778823fbba6ce790a14027477aaa1830a85be89af7908
+  sha256: 0d637c6cecc13b12f33f9e79bf5757c85f433c851e3ae7845ff20b6c49f41441
 
 build:
   noarch: python
   number: 0
   entry_points:
     - transformers=transformers.__main__:main
-  script: {{ PYTHON }} -m pip install . -vv
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - pip
     - python >=3.6
   run:
-    - numpy
     - python >=3.6
-    - regex !=2019.12.17
+    - numpy
     - requests
-    - sacremoses
     - tqdm >=4.27
-    - filelock
-    - tokenizers
-    - sentencepiece
+    # tokenizer lib
+    - tokenizers ==0.9.4
+    # utilities from PyPA to e.g. compare versions
     - packaging
+    # filesystem locks e.g. to prevent parallel downloads
     - filelock
-    - pytorch
-    - tensorflow
+    # for OpenAI GPT
+    - regex !=2019.12.17
+    # for XLM
+    - sacremoses
+    - sentencepiece
+    - protobuf
 
 test:
+  requires:
+    - pytorch
+    - tensorflow
   imports:
     - transformers
     - transformers.benchmark
@@ -62,3 +68,4 @@ extra:
     - rluria14
     - ndmaxar
     - setu4993
+    - hadim

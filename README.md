@@ -5,11 +5,11 @@ Home: https://github.com/huggingface/transformers
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/transformers-feedstock/blob/master/LICENSE.txt)
 
 Summary: State-of-the-art Natural Language Processing for TensorFlow 2.0 and PyTorch
 
-
+Documentation: https://huggingface.co/transformers/
 
 Current build status
 ====================
