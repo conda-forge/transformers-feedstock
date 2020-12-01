@@ -37,6 +37,7 @@ requirements:
     - sacremoses
     - sentencepiece
     - protobuf
+    - cookiecutetr
 
 test:
   requires:
