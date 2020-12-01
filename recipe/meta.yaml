@@ -1,5 +1,5 @@
 {% set name = "transformers" %}
-{% set version = "3.5.1" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0d637c6cecc13b12f33f9e79bf5757c85f433c851e3ae7845ff20b6c49f41441
+  sha256: bc71a06dbcd98807d7fe512938dd4ffc7801275d5c54e1c73434ff5a9f5d2f46
 
 build:
   noarch: python
   number: 0
   entry_points:
     - transformers=transformers.__main__:main
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -37,6 +37,7 @@ requirements:
     - sacremoses
     - sentencepiece
     - protobuf
+    - cookiecutter ==1.7.2
 
 test:
   requires:
