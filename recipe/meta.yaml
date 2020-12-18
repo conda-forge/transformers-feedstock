@@ -29,7 +29,6 @@ requirements:
     - filelock
     - regex !=2019.12.17
     - sacremoses
-    - protobuf
 
 test:
   imports:
