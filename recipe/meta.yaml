@@ -11,9 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
-  entry_points:
-    - transformers=transformers.__main__:main
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -25,32 +23,16 @@ requirements:
     - numpy
     - requests
     - tqdm >=4.27
-    # tokenizer lib
     - tokenizers ==0.9.4
-    # utilities from PyPA to e.g. compare versions
+    - dataclasses
     - packaging
-    # filesystem locks e.g. to prevent parallel downloads
     - filelock
-    # for OpenAI GPT
     - regex !=2019.12.17
-    # for XLM
     - sacremoses
-    - sentencepiece
-    - protobuf
-    - cookiecutter ==1.7.2
 
 test:
-  requires:
-    - pytorch
-    - tensorflow
   imports:
     - transformers
-    - transformers.benchmark
-    - transformers.commands
-    - transformers.data
-    - transformers.data.datasets
-    - transformers.data.metrics
-    - transformers.data.processors
   commands:
     - transformers-cli --help
 
