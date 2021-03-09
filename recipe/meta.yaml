@@ -1,5 +1,5 @@
 {% set name = "transformers" %}
-{% set version = "4.3.2" %}
+{% set version = "4.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bfa8bd35ac8494bbd1bf22a2b96471fd5691430f356da3fed2c850cc0194c9a9
+  sha256: 48d6cc3ab40c901b9ce803d3b445ff88f023150dde7b36bf834829bca759b7fd
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - numpy
     - requests
     - tqdm >=4.27
-    - tokenizers ==0.9.4
+    - tokenizers >=0.10.1,<0.11
     - dataclasses
     - packaging
     - filelock
@@ -52,3 +52,4 @@ extra:
     - ndmaxar
     - setu4993
     - hadim
+    - wietsedv
