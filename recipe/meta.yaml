@@ -35,6 +35,17 @@ requirements:
 test:
   imports:
     - transformers
+    - transformers.benchmark
+    - transformers.commands
+    - transformers.data
+    - transformers.data.datasets
+    - transformers.data.metrics
+    - transformers.data.processors
+    - transformers.models
+    - transformers.pipelines
+    - transformers.sagemaker
+    - transformers.utils
+
   commands:
     - transformers-cli --help
 
