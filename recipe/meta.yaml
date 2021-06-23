@@ -1,5 +1,5 @@
 {% set name = "transformers" %}
-{% set version = "4.6.1" %}
+{% set version = "4.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 83dbff763b7e7dc57cbef1a6b849655d4fcab6bffdd955c5e8bea12a4f76dc10
+  sha256: ab6339e6c7d7943dd5f68577dbcefd16d2151e0eb0d3a88182ba7449ad122f14
 
 build:
   noarch: python
@@ -30,10 +30,23 @@ requirements:
     - filelock
     - regex !=2019.12.17
     - sacremoses
+    - pyyaml
+    - pytorch
 
 test:
   imports:
     - transformers
+    - transformers.benchmark
+    - transformers.commands
+    - transformers.data
+    - transformers.data.datasets
+    - transformers.data.metrics
+    - transformers.data.processors
+    - transformers.models
+    - transformers.pipelines
+    - transformers.sagemaker
+    - transformers.utils
+
   commands:
     - transformers-cli --help
 
