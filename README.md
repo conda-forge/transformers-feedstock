@@ -125,5 +125,4 @@ Feedstock Maintainers
 * [@rluria14](https://github.com/rluria14/)
 * [@roccqqck](https://github.com/roccqqck/)
 * [@setu4993](https://github.com/setu4993/)
-* [@wietsedv](https://github.com/wietsedv/)
 
