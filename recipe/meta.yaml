@@ -18,19 +18,6 @@ requirements:
   host:
     - pip
     - python >=3.6
-    - numpy
-    - requests
-    - tqdm >=4.27
-    - tokenizers >=0.11.1,!=0.11.3
-    - huggingface_hub
-    - dataclasses
-    - importlib_metadata
-    - packaging
-    - filelock
-    - regex !=2019.12.17
-    - sacremoses
-    - pyyaml
-    - pytorch
   run:
     - python >=3.6
     - numpy
