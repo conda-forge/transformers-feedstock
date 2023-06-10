@@ -32,6 +32,7 @@ requirements:
     - filelock
     - regex !=2019.12.17
     - sacremoses
+    - safetensors
     - pyyaml
     - pytorch
 
