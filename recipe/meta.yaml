@@ -24,7 +24,7 @@ requirements:
     - requests
     - datasets !=2.5.0  # Required for transformers-cli.
     - filelock
-    - huggingface-hub >=0.14.1,<1.0
+    - huggingface_hub
     - importlib_metadata
     - numpy >=1.17
     - regex !=2019.12.17
@@ -33,8 +33,8 @@ requirements:
     - packaging >=20.0
     - pyyaml
     - pytorch >=1.9,!=1.12.0
-    - tokenizers >=0.11.1,!=0.11.3,<0.14
     - tqdm >=4.27
+    - tokenizers >=0.11.1,!=0.11.3,<0.14
 
 test:
   imports:
