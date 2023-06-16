@@ -41,7 +41,6 @@ test:
     - transformers.benchmark
     - transformers.commands
     - transformers.data
-    - transforemrs.generation
     - transformers.kernels
     - transformers.models
     - transformers.pipelines
