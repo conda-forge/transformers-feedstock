@@ -41,12 +41,12 @@ test:
     - transformers.benchmark
     - transformers.commands
     - transformers.data
-    - transformers.data.datasets
-    - transformers.data.metrics
-    - transformers.data.processors
+    - transforemrs.generation
+    - transformers.kernels
     - transformers.models
     - transformers.pipelines
     - transformers.sagemaker
+    - transformers.tools
     - transformers.utils
 
   commands:
