@@ -1,5 +1,5 @@
 {% set name = "transformers" %}
-{% set version = "4.34.0" %}
+{% set version = "4.34.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cc2ae61bfbfaa45337fd9017326669fc60e4f55125f589d50da47819e3d6f504
+  sha256: 1d0258d5a18063b66005bbe1e3276ec5943d9ab4ab47f020db1fd485cc40ea22
 
 build:
   noarch: python
