@@ -1,5 +1,5 @@
 {% set name = "transformers" %}
-{% set version = "4.40.2" %}
+{% set version = "4.41.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 657b6054a2097671398d976ad46e60836e7e15f9ea9551631a96e33cb9240649
+  sha256: 5971737e7c2e4d5ae1495f9d48af0351c0fb7c7c650b96508ac5996cd7f44f49
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - python >=3.8
     - datasets !=2.5.0  # Required for transformers-cli.
     - filelock
-    - huggingface_hub >=0.19.3,<1.0
+    - huggingface_hub >=0.23.0,<1.0
     - numpy >=1.17
     - regex !=2019.12.17
     - requests
@@ -41,7 +41,6 @@ test:
     - transformers.kernels
     - transformers.models
     - transformers.pipelines
-    - transformers.tools
     - transformers.utils
 
   commands:
