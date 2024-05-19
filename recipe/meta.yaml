@@ -41,7 +41,6 @@ test:
     - transformers.kernels
     - transformers.models
     - transformers.pipelines
-    - transformers.tools
     - transformers.utils
 
   commands:
