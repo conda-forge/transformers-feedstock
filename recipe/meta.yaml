@@ -1,5 +1,5 @@
 {% set name = "transformers" %}
-{% set version = "4.44.2" %}
+{% set version = "4.45.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 36aa17cc92ee154058e426d951684a2dab48751b35b49437896f898931270826
+  sha256: 29629f87965acc7b15e458a24580832d85da18ddc119410211747fe778c200ce
 
 build:
   noarch: python
@@ -30,7 +30,7 @@ requirements:
     - packaging >=20.0
     - pyyaml >=5.1
     - tqdm >=4.27
-    - tokenizers >=0.19,<0.20
+    - tokenizers >=0.20,<0.21
 
 test:
   imports:
