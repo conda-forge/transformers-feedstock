@@ -11,19 +11,20 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
+    - setuptools
     - python >=3.8
   run:
     - python >=3.8
     - datasets !=2.5.0  # Required for transformers-cli.
     - filelock
     - huggingface_hub >=0.23.0,<1.0
-    - numpy >=1.17,<2.0
+    - numpy >=1.17
     - regex !=2019.12.17
     - requests
     - safetensors >=0.4.1
