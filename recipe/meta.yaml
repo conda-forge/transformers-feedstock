@@ -31,7 +31,7 @@ requirements:
     - packaging >=20.0
     - pyyaml >=5.1
     - tqdm >=4.27
-    - tokenizers >=0.20,<0.21
+    - tokenizers >=0.21,<0.22
 
 test:
   imports:
