@@ -11,16 +11,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
     - setuptools
-    - python >=3.8
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - datasets !=2.5.0  # Required for transformers-cli.
     - filelock
     - huggingface_hub >=0.23.0,<1.0
@@ -34,6 +34,8 @@ requirements:
     - tokenizers >=0.21,<0.22
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - transformers
     - transformers.benchmark
