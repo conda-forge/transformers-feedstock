@@ -38,7 +38,7 @@ test:
     - python {{ python_min }}
   imports:
     - transformers
-    - transformers.benchmark
+    - transformers.agents
     - transformers.commands
     - transformers.data
     - transformers.kernels
