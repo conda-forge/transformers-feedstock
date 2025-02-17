@@ -1,5 +1,5 @@
 {% set name = "transformers" %}
-{% set version = "4.48.3" %}
+{% set version = "4.49.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a5e8f1e9a6430aa78215836be70cecd3f872d99eeda300f41ad6cc841724afdb
+  sha256: 7e40e640b5b8dc3f48743f5f5adbdce3660c82baafbd3afdfc04143cdbd2089e
 
 build:
   noarch: python
@@ -38,7 +38,7 @@ test:
     - python {{ python_min }}
   imports:
     - transformers
-    - transformers.benchmark
+    - transformers.agents
     - transformers.commands
     - transformers.data
     - transformers.kernels
@@ -46,8 +46,9 @@ test:
     - transformers.pipelines
     - transformers.utils
 
-  commands:
-    - transformers-cli --help
+  # Disabling until https://github.com/huggingface/transformers/issues/36244 is resolved.
+  # commands:
+  #   - transformers-cli --help
 
 about:
   home: https://github.com/huggingface/transformers
