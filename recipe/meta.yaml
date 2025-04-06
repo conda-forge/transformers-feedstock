@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - datasets !=2.5.0  # Required for transformers-cli.
     - filelock
-    - huggingface_hub >=0.23.0,<1.0
+    - huggingface_hub >=0.30.0,<1.0
     - numpy >=1.17
     - regex !=2019.12.17
     - requests
@@ -66,3 +66,4 @@ extra:
     - rluria14
     - ndmaxar
     - setu4993
+    - zbowling
