@@ -38,11 +38,15 @@ test:
     - python {{ python_min }}
   imports:
     - transformers
-    - transformers.commands
+    - transformers.cli
     - transformers.data
-    - transformers.kernels
+    - transformers.distributed
+    - transformers.generation
+    - transformers.integrations
+    - transformers.loss
     - transformers.models
     - transformers.pipelines
+    - transformers.quantizers
     - transformers.utils
 
   # Disabling until https://github.com/huggingface/transformers/issues/36244 is resolved.
