@@ -29,6 +29,7 @@ requirements:
     - requests
     - safetensors >=0.4.1
     - packaging >=20.0
+    - pytorch >=2.2
     - pyyaml >=5.1
     - tqdm >=4.27
     - tokenizers >=0.22,<=0.23
