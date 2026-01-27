@@ -1,5 +1,5 @@
 {% set name = "transformers" %}
-{% set version = "4.57.6" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 55e44126ece9dc0a291521b7e5492b572e6ef2766338a610b9ab5afbb70689d3
+  sha256: 5f5634efed6cf76ad068cc5834c7adbc32db78bbd6211fb70df2325a9c37dec8
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
     - python >={{ python_min }}
     - datasets !=2.5.0  # Required for transformers-cli.
     - filelock
-    - huggingface_hub >=0.34.0,<1.0
+    - huggingface_hub >=1.3.0,<2.0
     - numpy >=1.17
     - regex !=2019.12.17
     - requests
@@ -38,11 +38,15 @@ test:
     - python {{ python_min }}
   imports:
     - transformers
-    - transformers.commands
+    - transformers.cli
     - transformers.data
-    - transformers.kernels
+    - transformers.distributed
+    - transformers.generation
+    - transformers.integrations
+    - transformers.loss
     - transformers.models
     - transformers.pipelines
+    - transformers.quantizers
     - transformers.utils
 
   # Disabling until https://github.com/huggingface/transformers/issues/36244 is resolved.
