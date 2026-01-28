@@ -32,6 +32,7 @@ requirements:
     - pyyaml >=5.1
     - tqdm >=4.27
     - tokenizers >=0.22,<=0.23
+    - pytorch
 
 test:
   requires:
