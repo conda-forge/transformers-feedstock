@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -21,7 +21,6 @@ requirements:
     - python {{ python_min }}
   run:
     - python >={{ python_min }}
-    - datasets !=2.5.0  # Required for transformers-cli.
     - filelock
     - huggingface_hub >=1.3.0,<2.0
     - numpy >=1.17
