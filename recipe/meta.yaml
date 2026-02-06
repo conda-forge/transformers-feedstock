@@ -48,9 +48,10 @@ test:
     - transformers.quantizers
     - transformers.utils
 
-  commands:
-    - transformers env
-    - transformers --help
+  # Disabling until https://github.com/huggingface/transformers/pull/43656 is merged.
+  # commands:
+  #   - transformers env
+  #   - transformers --help
 
 about:
   home: https://github.com/huggingface/transformers
