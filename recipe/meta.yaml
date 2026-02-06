@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -48,9 +48,8 @@ test:
     - transformers.quantizers
     - transformers.utils
 
-  # Disabling until https://github.com/huggingface/transformers/issues/36244 is resolved.
-  # commands:
-  #   - transformers-cli --help
+  commands:
+    - transformers-cli --help
 
 about:
   home: https://github.com/huggingface/transformers
