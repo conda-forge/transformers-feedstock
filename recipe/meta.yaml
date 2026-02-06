@@ -44,9 +44,9 @@ test:
     - transformers.pipelines
     - transformers.utils
 
-  commands:
-    - transformers env
-    - transformers --help
+  # Disabling until https://github.com/huggingface/transformers/issues/36244 is resolved.
+  # commands:
+  #   - transformers-cli --help
 
 about:
   home: https://github.com/huggingface/transformers
