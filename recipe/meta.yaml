@@ -49,7 +49,8 @@ test:
     - transformers.utils
 
   commands:
-    - transformers-cli --help
+    - transformers env
+    - transformers --help
 
 about:
   home: https://github.com/huggingface/transformers
