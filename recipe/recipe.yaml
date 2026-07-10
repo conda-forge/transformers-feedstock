@@ -54,7 +54,7 @@ tests:
         - '*'
   - requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - transformers-cli --help
 
@@ -75,4 +75,3 @@ extra:
     - setu4993
     - zbowling
     - xhochy
-
