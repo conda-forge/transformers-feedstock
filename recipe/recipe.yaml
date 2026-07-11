@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: transformers
-  version: "5.13.0"
+  version: 5.13.1
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 940c1428e42a4238f9ccf0cd41e63c590701aa63c19fd2ce3d7d602222d68495
+  sha256: 1e2452d6778a7482158df5d5dacf6bf775d5b2fdcfce33caaf7f6b0e5f3e3397
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
@@ -27,7 +27,6 @@ requirements:
     - python ${{ python_min }}.*
   run:
     - python >=${{ python_min }}
-    - filelock
     - huggingface_hub >=1.5.0,<2.0
     - numpy >=1.17
     - packaging >=20.0
@@ -37,7 +36,6 @@ requirements:
     - typer
     - safetensors >=0.8.0
     - tqdm >=4.60
-
 tests:
   - python:
       imports:
@@ -52,7 +50,7 @@ tests:
         - transformers.pipelines
         - transformers.quantizers
         - transformers.utils
-      python_version: 
+      python_version:
         - ${{ python_min }}.*
         - '*'
   # Still broken, but with a fix at https://github.com/huggingface/transformers/pull/45999 (closed as stale)
