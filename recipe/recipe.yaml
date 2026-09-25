@@ -68,6 +68,7 @@ about:
   documentation: https://huggingface.co/transformers/
 
 extra:
+  feedstock-name: transformers
   recipe-maintainers:
     - mxr-conda
     - roccqqck
