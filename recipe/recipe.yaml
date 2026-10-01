@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: transformers
-  version: 5.17.0
+  version: 5.18.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: a153be279169b55b92d8000bf4af294aed684503d091cca7804da2dd8a9de000
+  sha256: d89c206e42e841af7cd314b3d2b21c03e977d819cdb4aef65ada048769a644df
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     - python ${{ python_min }}.*
   run:
     - python >=${{ python_min }}
-    - huggingface_hub >=1.5.0,<2.0
+    - huggingface_hub >=1.31.0,<3.0
     - numpy >=1.17
     - packaging >=20.0
     - pyyaml >=5.1
