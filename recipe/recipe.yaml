@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: transformers
-  version: "5.21.1"
+  version: "5.22.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 65e82dfbe8d0d0d6d09d402dca28e60b3f483beadbb7bdd259ea0e33a04e2efa
+  sha256: bed9fd76d6f43b4a1a9fc5d0c565ace7c77edbd029784f8cbcdf772cb5e924d8
 
 build:
   number: 0
